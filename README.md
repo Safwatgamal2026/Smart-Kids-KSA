@@ -2,6 +2,10 @@
 
 An interactive educational web application designed to teach children English letters, numbers, and basic mathematics through engaging audio-based learning activities.
 
+## 🌐 Live Demo
+
+Visit the live application: [https://smart-kids-ksa.netlify.app](https://smart-kids-ksa.netlify.app)
+
 ## Features
 
 - 🎧 **Audio Learning**: Click on letters, numbers, or questions to hear pronunciations
