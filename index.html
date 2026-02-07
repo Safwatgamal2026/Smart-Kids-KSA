@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Kids KSA | تعلم ممتع للأطفال</title>
+  <meta name="description" content="تعليم الأطفال الحروف الإنجليزية والأرقام والعمليات الحسابية بطريقة تفاعلية وباللغة والصوت والاختبارات." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top progress / confetti placeholder -->
+  <div class="topbar" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Smart Kids KSA">
+        <!-- Simple Saudi-friendly logo (SVG) -->
+        <svg class="brand-logo" width="44" height="44" viewBox="0 0 64 64" role="img" aria-label="Logo">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#0ea85a"/>
+              <stop offset="1" stop-color="#0b7d42"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="30" fill="url(#g)"/>
+          <path d="M18 34c8-10 20-10 28 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+          <path d="M22 26c6 6 14 6 20 0" fill="none" stroke="#d7ffe9" stroke-width="3" stroke-linecap="round"/>
+          <path d="M40 22c2 2 4 6 4 10" fill="none" stroke="#d7ffe9" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="38" r="3" fill="#fff"/>
+          <circle cx="40" cy="38" r="3" fill="#fff"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-title">Smart Kids KSA</span>
+          <span class="brand-sub">تعلم بالصوت • لعب • اختبارات</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+          <span class="sr-only">القائمة</span>
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+          <a class="nav-link" href="#letters">الحروف</a>
+          <a class="nav-link" href="#numbers">الأرقام</a>
+          <a class="nav-link" href="#math">العمليات</a>
+          <a class="nav-link" href="#quiz">الاختبار</a>
+          <button class="btn btn-ghost" id="soundBtn" type="button" title="تشغيل/إيقاف الصوت">
+            🔊 الصوت: <span id="soundState">مفعل</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="pill">
+            🇸🇦 هوية سعودية لطيفة • 🎧 تعلم بالصوت • ⭐ نظام نقاط
+          </div>
+          <h1>
+            موقع تعليمي تفاعلي للأطفال
+            <span class="grad">لتعلم الإنجليزية والرياضيات</span>
+          </h1>
+          <p class="lead">
+            اضغط… اسمع… جرّب… واكسب نجوم! واجهة احترافية ومتجاوبة مع كل الشاشات.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#letters">ابدأ بالحروف</a>
+            <a class="btn btn-secondary" href="#quiz">جرّب اختبار سريع</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num" id="starsCount">0</div>
+              <div class="stat-label">نجوم</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num" id="streakCount">0</div>
+              <div class="stat-label">سلسلة نجاح</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">A–Z</div>
+              <div class="stat-label">حروف</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Illustration (pure CSS/SVG) -->
+        <div class="hero-art" aria-hidden="true">
+          <div class="card-3d">
+            <div class="card-3d-top">
+              <span class="badge">KSA</span>
+              <span class="badge badge2">Kids</span>
+            </div>
+            <div class="card-3d-body">
+              <div class="big-abc">A B C</div>
+              <div class="mini-row">
+                <div class="chip">🔤 Letters</div>
+                <div class="chip">🔢 Numbers</div>
+                <div class="chip">➕ Math</div>
+              </div>
+              <div class="sand"></div>
+              <div class="landmarks">
+                <div class="tower"></div>
+                <div class="palm"></div>
+                <div class="dune"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wave" aria-hidden="true"></div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>كيف يتعلم الطفل هنا؟</h2>
+          <p>تفاعل بسيط + صوت + أسئلة قصيرة + تشجيع مستمر.</p>
+        </div>
+
+        <div class="grid features">
+          <article class="feature">
+            <div class="icon">🎧</div>
+            <h3>نطق فوري</h3>
+            <p>اضغط على الحرف أو الرقم وسيتم نطقه مباشرة.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">🧩</div>
+            <h3>تفاعل ممتع</h3>
+            <p>اختيار، سحب، ضغط… (بنضيفها تدريجيًا).</p>
+          </article>
+          <article class="feature">
+            <div class="icon">🏆</div>
+            <h3>نقاط ونجوم</h3>
+            <p>كل إجابة صحيحة = نجمة + سلسلة نجاح.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">📱</div>
+            <h3>متجاوب بالكامل</h3>
+            <p>تصميم يعمل بجودة عالية على جميع الشاشات.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LETTERS -->
+    <section class="section alt" id="letters">
+      <div class="container">
+        <div class="section-head row">
+          <div>
+            <h2>تعلم الحروف الإنجليزية</h2>
+            <p>اضغط على أي حرف للاستماع للنطق، ثم جرّب نشاط سريع.</p>
+          </div>
+          <div class="controls">
+            <button class="btn btn-ghost" id="lettersPrev" type="button">التالي ▶</button>
+            <button class="btn btn-ghost" id="lettersNext" type="button">◀ السابق</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="big-card">
+            <div class="big-letter" id="currentLetter">A</div>
+            <div class="big-actions">
+              <button class="btn btn-primary" id="speakLetter" type="button">🔊 اسمع الحرف</button>
+              <button class="btn btn-secondary" id="letterMiniQuiz" type="button">⭐ اختبار صغير</button>
+            </div>
+            <div class="hint" id="letterHint">اضغط على "اسمع الحرف" لتشغيل النطق.</div>
+          </div>
+
+          <div class="grid tiles" id="lettersGrid" aria-label="Letters grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUMBERS -->
+    <section class="section" id="numbers">
+      <div class="container">
+        <div class="section-head">
+          <h2>تعلم الأرقام</h2>
+          <p>اضغط على رقم لسماع النطق، ثم جرّب العدّ.</p>
+        </div>
+
+        <div class="panel">
+          <div class="grid tiles" id="numbersGrid" aria-label="Numbers grid"></div>
+
+          <div class="count-box">
+            <div class="count-title">نشاط العدّ السريع</div>
+            <div class="count-row">
+              <button class="btn btn-ghost" id="countMinus" type="button">-</button>
+              <div class="count-num" id="countValue">0</div>
+              <button class="btn btn-ghost" id="countPlus" type="button">+</button>
+            </div>
+            <button class="btn btn-primary" id="speakCount" type="button">🔊 انطق الرقم</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATH -->
+    <section class="section alt" id="math">
+      <div class="container">
+        <div class="section-head">
+          <h2>العمليات الحسابية</h2>
+          <p>اختر العملية… حل… واسمع السؤال والنتيجة.</p>
+        </div>
+
+        <div class="math-panel">
+          <div class="math-card">
+            <div class="math-top">
+              <div class="segmented" role="group" aria-label="Math mode">
+                <button class="seg on" data-op="+" type="button">جمع</button>
+                <button class="seg" data-op="-" type="button">طرح</button>
+              </div>
+              <button class="btn btn-ghost" id="newQuestion" type="button">🔄 سؤال جديد</button>
+            </div>
+
+            <div class="math-q">
+              <span class="n" id="n1">2</span>
+              <span class="op" id="opSym">+</span>
+              <span class="n" id="n2">3</span>
+              <span class="eq">=</span>
+              <input class="math-input" id="answer" inputmode="numeric" placeholder="؟" aria-label="Answer" />
+            </div>
+
+            <div class="math-actions">
+              <button class="btn btn-primary" id="checkAnswer" type="button">✅ تحقق</button>
+              <button class="btn btn-secondary" id="speakQuestion" type="button">🔊 اسمع السؤال</button>
+            </div>
+
+            <div class="result" id="mathResult" aria-live="polite"></div>
+          </div>
+
+          <div class="math-side">
+            <div class="side-card">
+              <h3>نصائح للطفل</h3>
+              <ul>
+                <li>ابدأ بأرقام صغيرة.</li>
+                <li>استخدم العدّ بالأصابع.</li>
+                <li>اسمع السؤال قبل الإجابة.</li>
+              </ul>
+            </div>
+
+            <div class="side-card">
+              <h3>هدف اليوم</h3>
+              <p>احصل على <strong>5 نجوم</strong> من خلال إجابات صحيحة!</p>
+              <div class="goalbar">
+                <div class="goalfill" id="goalFill" style="width:0%"></div>
+              </div>
+              <div class="goalmeta"><span id="goalNow">0</span>/5</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section" id="quiz">
+      <div class="container">
+        <div class="section-head">
+          <h2>اختبار سريع</h2>
+          <p>سؤال واحد في كل مرة — بسيط وممتع.</p>
+        </div>
+
+        <div class="quiz-card">
+          <div class="quiz-q" id="quizQuestion">ما هو نطق هذا الحرف؟ <span class="quiz-big">B</span></div>
+          <div class="quiz-choices" id="quizChoices"></div>
+          <div class="quiz-actions">
+            <button class="btn btn-secondary" id="quizSpeak" type="button">🔊 اسمع</button>
+            <button class="btn btn-ghost" id="quizNext" type="button">التالي</button>
+          </div>
+          <div class="result" id="quizResult" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Smart Kids KSA</strong>
+          <div class="muted">تعليم تفاعلي للأطفال — نسخة أولية</div>
+        </div>
+        <div class="muted">© <span id="year"></span></div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
